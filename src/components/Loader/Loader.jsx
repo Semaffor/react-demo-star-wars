@@ -1,8 +1,8 @@
+import cl from './Loader.module.css'
+
 const Loader = () => {
     return (
-        <div>
-
-        </div>
+        <div class={cl.Loader}><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
     );
 }
 
