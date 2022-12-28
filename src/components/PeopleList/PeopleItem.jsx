@@ -1,5 +1,6 @@
-import { withErrorApi } from '../../hoc/withErrorApi';
 import PropTypes from 'prop-types'
+
+import { withErrorApi } from '../../hoc/withErrorApi';
 
 import styles from './PeopleItem.module.css'
 

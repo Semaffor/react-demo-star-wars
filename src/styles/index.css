@@ -4,9 +4,12 @@
 
 	--spacing-medium: 15px;
 
-	--border-radius-small: 5px;
+	--transition: 0.4s;
+	--border-radius-main: 5px;
 
 	--font-size-header: 24px;
+
+	--theme-default-header: #cccc46;
 }
 
 * {
@@ -17,4 +20,12 @@
 
 body {
 	background-color: var(--color-dark-gray);
+}
+
+.header__text {
+	line-height: 1.7;
+	font-size: var(--font-size-header);
+	text-shadow: 0 0 2p #000;
+	color: var(--theme-default-header);
+	transition: color var(--transition);
 }
