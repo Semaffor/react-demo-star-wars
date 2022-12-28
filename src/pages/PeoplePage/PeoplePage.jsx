@@ -1,12 +1,18 @@
-import React, { useState } from 'react'
-import { useEffect } from 'react';
+//Libs
+import React, { useState, useEffect } from 'react'
+import PropTypes from 'prop-types'
 
-import peopleService from '../../API/PeopleService';
-import { getPeopleId, getPeopleImageUrl } from '../../utils/getPeopleData';
-
+//HOC
+import { withErrorApi } from '../../hoc/withErrorApi';
+//Components
 import PeopleItem from '../../components/PeopleList/PeopleItem';
 import Loader from '../../components/Loader/Loader';
-import { withErrorApi } from '../../hoc/withErrorApi';
+//Utils, services
+import peopleService from '../../API/PeopleService';
+import { getPeopleId, getPeopleImageUrl } from '../../utils/getPeopleData';
+//Styles
+import styles from './PeoplePage.module.css'
+
 
 const PeoplePage = ({ setErrorApi }) => {
 
@@ -41,6 +47,10 @@ const PeoplePage = ({ setErrorApi }) => {
       }
     </>
   );
+}
+
+PeoplePage.propTypes = {
+  setErrorApi: PropTypes.func
 }
 
 export default withErrorApi(PeoplePage);

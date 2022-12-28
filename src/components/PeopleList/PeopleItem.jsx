@@ -1,4 +1,6 @@
 import { withErrorApi } from '../../hoc/withErrorApi';
+import PropTypes from 'prop-types'
+
 import styles from './PeopleItem.module.css'
 
 const PeopleItem = ({ people }) => {
@@ -23,6 +25,10 @@ const PeopleItem = ({ people }) => {
       }
     </ul>
   );
+}
+
+PeopleItem.propTypes = {
+  people: PropTypes.array
 }
 
 export default withErrorApi(PeopleItem);
