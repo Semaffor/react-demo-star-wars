@@ -1,7 +1,8 @@
-import axios from "axios";
+import axios from 'axios';
+import { URL_ROOT } from './Constants';
 
 const axiosBaseURL = axios.create({
-    baseURL: 'https://swapi.dev/api/'
+	baseURL: URL_ROOT
 });
 
-export default axiosBaseURL
+export default axiosBaseURL;

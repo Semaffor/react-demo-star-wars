@@ -1,17 +1,23 @@
 import React, { useState } from 'react'
-import peopleService from '../../API/PeopleService';
 import { useEffect } from 'react';
+
+import peopleService from '../../API/PeopleService';
+import { getPeopleId, getPeopleImageUrl } from '../../utils/getPeopleData';
+
+import PeopleItem from '../../components/PeopleList/PeopleList';
 import Loader from '../../components/Loader/Loader';
 
 const PeoplePage = () => {
 
-  const [people, setPeople] = useState([]);
+  const [people, setPeople] = useState();
 
   const getPeople = async () => {
-    const data = await peopleService.getPeople();
+    const data = await peopleService.getPeople()
     setPeople(
       data.results.map(({ name, url }) => {
-        return { name, url }
+        const id = getPeopleId(url)
+        const imgUrl = getPeopleImageUrl(id)
+        return { id, name, imgUrl }
       }));
   };
 
@@ -22,13 +28,7 @@ const PeoplePage = () => {
   return (
     <>
       {people
-        ? people.map(({ name, url }) => {
-          return <li
-            key={name}
-          >
-            {name}
-          </li>
-        })
+        ? <PeopleItem people={people} />
         : <Loader />
       }
     </>
