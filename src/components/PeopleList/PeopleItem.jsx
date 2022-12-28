@@ -1,4 +1,5 @@
-import styles from './PeopleList.module.css'
+import { withErrorApi } from '../../hoc/withErrorApi';
+import styles from './PeopleItem.module.css'
 
 const PeopleItem = ({ people }) => {
   return (
@@ -24,4 +25,4 @@ const PeopleItem = ({ people }) => {
   );
 }
 
-export default PeopleItem;
+export default withErrorApi(PeopleItem);

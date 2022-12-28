@@ -1,9 +1,12 @@
 :root {
 	--color-dark-gray: #10100e;
+	--color-yellow: #ffff00;
 
 	--spacing-medium: 15px;
 
 	--border-radius-small: 5px;
+
+	--font-size-header: 24px;
 }
 
 * {
