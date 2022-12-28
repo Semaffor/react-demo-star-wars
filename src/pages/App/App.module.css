@@ -1,0 +1,12 @@
+.wrapper {
+	max-width: var(--width-max);
+	margin: auto;
+	background-color: #000;
+	padding: var(--spacing-large) 0;
+}
+
+@media (max-width: 1400px) {
+	.wrapper {
+		padding: var(--spacing-large) var(--spacing-large);
+	}
+}

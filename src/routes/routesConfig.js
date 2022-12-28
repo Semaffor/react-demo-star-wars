@@ -4,11 +4,13 @@ import PeoplePage from '../pages/PeoplePage/PeoplePage';
 const routesConfig = [
   {
     path: '/',
-    element: <HomePage />
+    element: <HomePage />,
+    title: 'Home'
   },
   {
     path: '/people',
-    element: <PeoplePage />
+    element: <PeoplePage />,
+    title: 'People'
   }
 ]
 
